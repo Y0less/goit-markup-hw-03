@@ -1,0 +1,181 @@
+:root {
+  /* IRIS */
+  --primary-brand-color: #4d5ae5;
+
+  /* OCEAN */
+  --pressed-state-color: #404bbf;
+
+  /* NAVY BLUE */
+  --dark-color: #2e2f42;
+
+  /* GREEN */
+  --sucsess-color: #31d0aa;
+
+  /* SLATE */
+  --text-color: #434455;
+
+  /* LIGHT SLATE */
+  --subtle-text: #8e8f99;
+
+  /* CORNFLOWER */
+  --accent-color: #e7e9fc;
+
+  /* CLOUD */
+  --light-color: #f4f4fd;
+
+  /* NAVY BLUE MODAL */
+  --modal-overlay-color: #2e2f42;
+
+  /* GREY */
+  --hero-background-color: #2e2f42;
+
+  --white-color: #ffffff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+}
+
+/* Header Section */
+.header {
+  border-color: var(--accent-color);
+}
+
+/* Logo Style */
+.logo-main {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-brand-color);
+}
+.logo-secondary {
+  color: var(--dark-color);
+}
+
+/* Remove dots from lists class */
+.list {
+  list-style: none;
+}
+
+/* Links styles */
+.site-nav .link {
+  color: var(--dark-color);
+  font-weight: 500;
+}
+.contacts .link {
+  color: var(--dark-color);
+  font-style: normal;
+}
+.link {
+  text-decoration: none;
+}
+.list .link:hover,
+.list .link:focus {
+  color: var(--pressed-state-color);
+}
+
+/* Main Section */
+/* Hero Section */
+.hero-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  color: var(--white-color);
+}
+.hero-section {
+  background-color: var(--dark-color);
+}
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
+  background-color: var(--primary-brand-color);
+  border-color: var(--primary-brand-color);
+  cursor: pointer;
+}
+.button:hover,
+.button:focus {
+  background-color: var(--pressed-state-color);
+}
+
+/* Section 1 */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.sub-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--dark-color);
+}
+
+/* Section 2 */
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-transform: capitalize;
+  color: var(--dark-color);
+}
+.sevices-list {
+  border-color: var(--accent-color);
+}
+
+/* section 3 */
+.team-section {
+  background-color: var(--light-color);
+}
+.team-list {
+  text-align: center;
+}
+
+/* Footer */
+.footer-section {
+  background-color: var(--dark-color);
+}
+.logo-tertiary {
+  color: var(--light-color);
+}
+.footer-text {
+  color: var(--accent-color);
+}
+
+/* Portfolio */
+.portfolio-list .button {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--primary-brand-color);
+  background-color: var(--light-color);
+  border-color: var(--accent-color);
+}
+.portfolio-list .button:hover,
+.portfolio-list .button:focus {
+  color: var(--white-color);
+  background-color: var(--pressed-state-color);
+  border-color: var(--pressed-state-color);
+}
