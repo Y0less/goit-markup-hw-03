@@ -32,6 +32,7 @@
   --white-color: #ffffff;
 
   --card-gap: 24px;
+  --portfolio-row-gap: 48px;
 }
 
 h1,
@@ -158,6 +159,9 @@ body {
 .section.nopadding-btm {
   padding-bottom: 0;
 }
+.section.portfolio-paddings {
+  padding-top: 96px;
+}
 
 .container {
   width: 1158px;
@@ -245,7 +249,7 @@ body {
 }
 .services-list {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   margin-top: calc(-1 * var(--card-gap));
   margin-left: calc(-1 * var(--card-gap));
 }
@@ -253,7 +257,7 @@ body {
   flex-basis: calc(100% / 3 - var(--card-gap));
   margin-top: var(--card-gap);
   margin-left: var(--card-gap);
-  /* outline: 1px solid teal; */
+  /* outline: 1px solid red; */
 }
 
 /* section 3 */
@@ -306,7 +310,16 @@ body {
 }
 
 /* Portfolio */
-.portfolio-list .button {
+/* Portfolio filter buttons */
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 72px;
+}
+.portfolio-buttons .item + .item {
+  margin-left: 24px;
+}
+.portfolio-buttons .button {
   padding: 12px 24px;
   font-family: inherit;
   font-style: normal;
@@ -319,11 +332,33 @@ body {
   border: solid 1px var(--accent-color);
   box-shadow: 0 0 0;
 }
-.portfolio-list .button:hover,
-.portfolio-list .button:focus {
+.portfolio-buttons .button:hover,
+.portfolio-buttons .button:focus {
   color: var(--white-color);
   background-color: var(--pressed-state-color);
   border-color: var(--pressed-state-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* portfolio grid */
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--portfolio-row-gap));
+  margin-left: calc(-1 * var(--card-gap));
+}
+.portfolio-list > .item {
+  flex-basis: calc(100% / 3 - var(--card-gap));
+  margin-top: var(--portfolio-row-gap);
+  margin-left: var(--card-gap);
+  /* outline: 1px solid red; */
+}
+.item-caption {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+
+  border: solid var(--accent-color);
+  border-width: 0 1px 1px 1px;
 }
