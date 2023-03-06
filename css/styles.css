@@ -30,6 +30,24 @@
   --hero-background-color: #2e2f42;
 
   --white-color: #ffffff;
+
+  --card-gap: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+img {
+  display: block;
+  /* max-width: 100%; */
 }
 
 body {
@@ -43,7 +61,7 @@ body {
 
 /* Header Section */
 .header {
-  border-color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
 }
 
 /* Logo Style */
@@ -63,6 +81,8 @@ body {
 /* Remove dots from lists class */
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Links styles */
@@ -83,18 +103,48 @@ body {
 }
 
 /* Main Section */
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  outline: 1px solid teal;
+}
+.section.nopadding-btm {
+  padding-bottom: 0;
+}
+
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid tomato;
+}
+
 /* Hero Section */
 .hero-title {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
   color: var(--white-color);
+  margin-bottom: 48px;
+  width: 496px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-section {
+  text-align: center;
   background-color: var(--dark-color);
 }
+.hero-section {
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
+
 .button {
+  border-radius: 4px;
+  border: 0;
+  padding: 16px 32px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -102,8 +152,8 @@ body {
   letter-spacing: 0.04em;
   color: var(--white-color);
   background-color: var(--primary-brand-color);
-  border-color: var(--primary-brand-color);
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .button:hover,
 .button:focus {
@@ -124,6 +174,7 @@ body {
   margin: -1px;
 }
 .sub-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -132,11 +183,13 @@ body {
 
 /* Section 2 */
 .title {
+  margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-transform: capitalize;
   color: var(--dark-color);
+  text-align: center;
 }
 .sevices-list {
   border-color: var(--accent-color);
@@ -145,14 +198,38 @@ body {
 /* section 3 */
 .team-section {
   background-color: var(--light-color);
-}
-.team-list {
   text-align: center;
+}
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: calc(-1 * var(--card-gap));
+  margin-left: calc(-1 * var(--card-gap));
+}
+.card-set > .card {
+  /* outline: 1px solid teal; */
+
+  flex-basis: calc(100% / 4 - var(--card-gap));
+  margin-top: var(--card-gap);
+  margin-left: var(--card-gap);
+
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+}
+.card-caption {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 /* Footer */
 .footer-section {
   background-color: var(--dark-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .logo-tertiary {
   color: var(--light-color);
@@ -160,9 +237,16 @@ body {
 .footer-text {
   color: var(--accent-color);
 }
+.footer-section a[class="logo-main"] {
+  margin-bottom: 16px;
+}
+.slogan-part {
+  width: 264px;
+}
 
 /* Portfolio */
 .portfolio-list .button {
+  padding: 12px 24px;
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
@@ -171,11 +255,14 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-brand-color);
   background-color: var(--light-color);
-  border-color: var(--accent-color);
+  border: solid 1px var(--accent-color);
+  box-shadow: 0 0 0;
 }
 .portfolio-list .button:hover,
 .portfolio-list .button:focus {
   color: var(--white-color);
   background-color: var(--pressed-state-color);
   border-color: var(--pressed-state-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
