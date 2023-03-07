@@ -218,13 +218,12 @@ body {
 /* Section 1 */
 .advantages {
   display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--card-gap));
+}
+.advantages > .item + .item {
+  margin-left: 24px;
 }
 .advantages > .item {
-  /* width: 264px; */
-  flex-basis: calc(100% / 4 - var(--card-gap));
-  margin-left: var(--card-gap);
+  width: 264px;
   /* outline: solid 1px forestgreen; */
 }
 .sub-title {
